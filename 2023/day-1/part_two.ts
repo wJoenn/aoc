@@ -10,7 +10,7 @@ fs.readFile(path.resolve(__dirname, "input.txt"), 'utf8', (_, lines: string) => 
 
     let firstDigit = digits[0][1]
     firstDigit = firstDigit.length > 1 ? NUMBERS[firstDigit] : firstDigit
-    let lastDigit = digits.at(-1)[1]
+    let lastDigit = digits.at(-1)![1]
     lastDigit = lastDigit.length > 1 ? NUMBERS[lastDigit] : lastDigit
 
     return +`${firstDigit}${lastDigit}`
@@ -19,5 +19,5 @@ fs.readFile(path.resolve(__dirname, "input.txt"), 'utf8', (_, lines: string) => 
   const sum = numbers.reduce((acc, sum) => sum + acc)
 
   console.log(sum)
-  // 54667
+  // 54203
 })
