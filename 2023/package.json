@@ -3,7 +3,8 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "lint": "eslint . --ext .js,.ts --max-warnings=0"
+    "lint": "eslint . --ext .js,.ts --max-warnings=0",
+    "rubocop": "bundle exec rubocop && fasterer"
   },
   "dependencies": {},
   "devDependencies": {

@@ -1,0 +1,37 @@
+require:
+  - standard
+  - standard-custom
+  - standard-performance
+  - rubocop-performance
+
+inherit_gem:
+  standard: config/base.yml
+  standard-custom: config/base.yml
+  standard-performance: config/base.yml
+
+AllCops:
+  NewCops: enable
+  Exclude:
+    - "Gemfile"
+
+Layout/EmptyLineAfterGuardClause:
+  Enabled: true
+Layout/LineLength:
+  Enabled: true
+  AllowedPatterns: ["# "]
+Layout/SpaceInsideHashLiteralBraces:
+  EnforcedStyle: "space"
+
+Lint/ShadowingOuterLocalVariable:
+  Enabled: true
+
+Metrics/MethodLength:
+  Enabled: true
+  CountAsOne: ["array", "hash", "heredoc", "method_call"]
+
+Style/BlockDelimiters:
+  EnforcedStyle: braces_for_chaining
+Style/MultilineTernaryOperator:
+  Enabled: true
+Style/RegexpLiteral:
+  AllowInnerSlashes: true
